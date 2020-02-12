@@ -48,24 +48,3 @@ let createGame = function(correctNumber){
 let game = createGame(55)
 game()
 
-
-// function createPrompt(defaultValue){
-//   function myPrompt(text){
-//     let result = prompt(text)
-//     if (result){
-//       return result
-//     } else {
-//       return defaultValue
-//     }
-//   }
-
-//   return myPrompt
-// }
-
-
-
-// prompOr5 = createPrompt(5)
-// promtOr10 = createPrompt(10)
-// prompOrHello = createPrompt('Hello')
-
-// prompOr5('adsadasd')
