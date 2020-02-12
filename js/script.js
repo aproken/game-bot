@@ -6,7 +6,8 @@ let isNumber = function(n) {
 }
 
 //Функция проверяет угадал или нет
-let createGame = function(correctNumber){
+let createGame = function(){
+  let correctNumber = Math.floor(Math.random() * 101)
   console.log(correctNumber)
   let getNumber = function() {
  
@@ -44,5 +45,5 @@ let createGame = function(correctNumber){
   return getNumber
 }    
 
-let game = createGame(Math.floor(Math.random() * 101))
+let game = createGame()
 game()
