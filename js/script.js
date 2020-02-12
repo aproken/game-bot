@@ -7,6 +7,7 @@ let isNumber = function(n) {
 
 //Функция проверяет угадал или нет
 let createGame = function(correctNumber){
+  console.log(correctNumber)
   let getNumber = function() {
  
     //Функция проверяет, хочет играть или нет
@@ -18,17 +19,15 @@ let createGame = function(correctNumber){
       }
     }
   
-    let wish
-    let userNumber = prompt('Угадай число от 1 до 100')
-    console.log(userNumber)
-    console.log(!isNumber(userNumber))
-  
-    if (!isNumber(userNumber) || (parseFloat(userNumber) > 100)){
+    let wish,
+        userNumber = prompt('Угадай число от 1 до 100')
+    
+    if (userNumber === null) {
+      alert('Может, в следующий раз...')
+    }
+    else if (!isNumber(userNumber) || (parseFloat(userNumber) > 100)){
       wish = confirm('Введи число от 0 до 100!')
       getWish(wish)
-    }
-    else if (userNumber === null) {
-      alert('Может, в следующий раз...')
     }
     else if (userNumber == correctNumber) {
       alert('Ты угадал!')
@@ -45,6 +44,5 @@ let createGame = function(correctNumber){
   return getNumber
 }    
 
-let game = createGame(55)
+let game = createGame(Math.floor(Math.random() * 101))
 game()
-
