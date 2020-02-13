@@ -49,6 +49,9 @@ let createGame = function(){
     else if (userNumber == correctNumber) {
       wish = confirm('Поздравляю, Вы угадали!!! Хотели бы сыграть еще?')
       if (wish) {
+        correctNumber = Math.floor(Math.random() * 101)
+        setValue = 10
+        console.log("Загаданное число", correctNumber)
         game()
       }
     } 
