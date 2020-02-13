@@ -8,7 +8,7 @@ let isNumber = function(n) {
 //Функция проверяет угадал или нет
 let createGame = function(){
   let correctNumber = Math.floor(Math.random() * 101),
-      setValue = 2
+      setValue = 10
   
     console.log("Загаданное число", correctNumber)
 
@@ -66,7 +66,7 @@ let createGame = function(){
       wish = confirm('Попытки закончились, хотите сыграть еще?')
       if (wish) {
         correctNumber = Math.floor(Math.random() * 101)
-        setValue = 2
+        setValue = 10
         console.log("Загаданное число", correctNumber)
         game()
       }
